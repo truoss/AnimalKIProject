@@ -1,0 +1,13 @@
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEditor.dll
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEngine.dll
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEngine.xml
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_bin\Debug\UnityEditor.xml
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_obj\Debug\AnimalKI.CSharp.csprojResolveAssemblyReference.cache
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+F:\Unity\_projekts\Animal KI\AnimalKIProject\AnimalKI\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
