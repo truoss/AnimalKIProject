@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 21ab753ea8ba27f45bbdd436a1401a80
-timeCreated: 1454251296
+guid: 4a4ae5b511319e54da45f4cb0cf8c9c7
+timeCreated: 1454453960
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -16,36 +16,27 @@ ModelImporter:
     100016: hand.L
     100018: hand.R
     100020: head
-    100022: heel.L
-    100024: heel.L_end
-    100026: heel.R
-    100028: heel.R_end
-    100030: hips
-    100032: neck
-    100034: shin.L
-    100036: shin.R
-    100038: shoulder.L
-    100040: shoulder.R
-    100042: spine
-    100044: tail_01
-    100046: tail_02
-    100048: tail_root
-    100050: tail_tip
-    100052: tail_tip_end
-    100054: thigh.L
-    100056: thigh.R
-    100058: thumb.01.L
-    100060: thumb.01.L_end
-    100062: thumb.01.R
-    100064: thumb.01.R_end
-    100066: toe.L
-    100068: toe.L_end
-    100070: toe.R
-    100072: toe.R_end
-    100074: upper_arm.L
-    100076: upper_arm.R
-    100078: yaw
-    100080: yaw_end
+    100022: hips
+    100024: hips_main
+    100026: neck
+    100028: shin.L
+    100030: shin.R
+    100032: shoulder.L
+    100034: shoulder.R
+    100036: spine
+    100038: tail_01
+    100040: tail_02
+    100042: tail_root
+    100044: tail_tip
+    100046: thigh.L
+    100048: thigh.R
+    100050: thumb.01.L
+    100052: thumb.01.R
+    100054: toe.L
+    100056: toe.R
+    100058: upper_arm.L
+    100060: upper_arm.R
+    100062: yaw
     400000: //RootNode
     400002: chest
     400004: foot.L
@@ -57,41 +48,29 @@ ModelImporter:
     400016: hand.L
     400018: hand.R
     400020: head
-    400022: heel.L
-    400024: heel.L_end
-    400026: heel.R
-    400028: heel.R_end
-    400030: hips
-    400032: neck
-    400034: shin.L
-    400036: shin.R
-    400038: shoulder.L
-    400040: shoulder.R
-    400042: spine
-    400044: tail_01
-    400046: tail_02
-    400048: tail_root
-    400050: tail_tip
-    400052: tail_tip_end
-    400054: thigh.L
-    400056: thigh.R
-    400058: thumb.01.L
-    400060: thumb.01.L_end
-    400062: thumb.01.R
-    400064: thumb.01.R_end
-    400066: toe.L
-    400068: toe.L_end
-    400070: toe.R
-    400072: toe.R_end
-    400074: upper_arm.L
-    400076: upper_arm.R
-    400078: yaw
-    400080: yaw_end
+    400022: hips
+    400024: hips_main
+    400026: neck
+    400028: shin.L
+    400030: shin.R
+    400032: shoulder.L
+    400034: shoulder.R
+    400036: spine
+    400038: tail_01
+    400040: tail_02
+    400042: tail_root
+    400044: tail_tip
+    400046: thigh.L
+    400048: thigh.R
+    400050: thumb.01.L
+    400052: thumb.01.R
+    400054: toe.L
+    400056: toe.R
+    400058: upper_arm.L
+    400060: upper_arm.R
+    400062: yaw
     4300000: Glumanda
-    7400000: idle1
-    7400002: tpose
-    7400004: Glumanda_Rig|idle1
-    7400006: Glumanda_Rig|tpose
+    7400000: Glumanda_Rig|turn_left
     9500000: //RootNode
     13700000: Glumanda
   materials:
@@ -103,7 +82,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleRotations: 1
     optimizeGameObjects: 0
-    motionNodeName: Glumanda_Rig
+    motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -116,230 +95,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle1
-      takeName: idle1
+      name: Glumanda_Rig|turn_left
+      takeName: Glumanda_Rig|turn_left
       firstFrame: 0
-      lastFrame: 234
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Glumanda
-        weight: 1
-      - path: Glumanda_Rig
-        weight: 1
-      - path: Glumanda_Rig/hips
-        weight: 1
-      - path: Glumanda_Rig/hips/spine
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw/yaw_end
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.01.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.01.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip/tail_tip_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L/heel.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R/heel.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: tpose
-      takeName: tpose
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Glumanda
-        weight: 1
-      - path: Glumanda_Rig
-        weight: 1
-      - path: Glumanda_Rig/hips
-        weight: 1
-      - path: Glumanda_Rig/hips/spine
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw/yaw_end
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.01.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.01.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip/tail_tip_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L/heel.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R/heel.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Glumanda_Rig|idle1
-      takeName: Glumanda_Rig|idle1
-      firstFrame: 0
-      lastFrame: 234
+      lastFrame: 43
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -347,116 +106,6 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Glumanda
-        weight: 1
-      - path: Glumanda_Rig
-        weight: 1
-      - path: Glumanda_Rig/hips
-        weight: 1
-      - path: Glumanda_Rig/hips/spine
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw/yaw_end
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.01.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R
-        weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.01.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip
-        weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip/tail_tip_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L/heel.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R/heel.R_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Glumanda_Rig|tpose
-      takeName: Glumanda_Rig|tpose
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -476,81 +125,63 @@ ModelImporter:
         weight: 1
       - path: Glumanda_Rig
         weight: 1
-      - path: Glumanda_Rig/hips
+      - path: Glumanda_Rig/hips_main
         weight: 1
-      - path: Glumanda_Rig/hips/spine
+      - path: Glumanda_Rig/hips_main/hips
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest
+      - path: Glumanda_Rig/hips_main/hips/spine
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck
+      - path: Glumanda_Rig/hips_main/hips/spine/chest
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/neck
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/neck/head
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/neck/head/yaw/yaw_end
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/neck/head/yaw
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.L
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.01.L_end
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.R
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+      - path: Glumanda_Rig/hips_main/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R
+      - path: Glumanda_Rig/hips_main/hips/tail_root
         weight: 1
-      - path: Glumanda_Rig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.01.R_end
+      - path: Glumanda_Rig/hips_main/hips/tail_root/tail_01
         weight: 1
-      - path: Glumanda_Rig/hips/tail_root
+      - path: Glumanda_Rig/hips_main/hips/tail_root/tail_01/tail_02
         weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01
+      - path: Glumanda_Rig/hips_main/hips/tail_root/tail_01/tail_02/tail_tip
         weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02
+      - path: Glumanda_Rig/hips_main/hips/thigh.L
         weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip
+      - path: Glumanda_Rig/hips_main/hips/thigh.L/shin.L
         weight: 1
-      - path: Glumanda_Rig/hips/tail_root/tail_01/tail_02/tail_tip/tail_tip_end
+      - path: Glumanda_Rig/hips_main/hips/thigh.L/shin.L/foot.L
         weight: 1
-      - path: Glumanda_Rig/hips/thigh.L
+      - path: Glumanda_Rig/hips_main/hips/thigh.L/shin.L/foot.L/toe.L
         weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L
+      - path: Glumanda_Rig/hips_main/hips/thigh.R
         weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L
+      - path: Glumanda_Rig/hips_main/hips/thigh.R/shin.R
         weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L
+      - path: Glumanda_Rig/hips_main/hips/thigh.R/shin.R/foot.R
         weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.L/shin.L/heel.L/heel.L_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R
-        weight: 1
-      - path: Glumanda_Rig/hips/thigh.R/shin.R/heel.R/heel.R_end
+      - path: Glumanda_Rig/hips_main/hips/thigh.R/shin.R/foot.R/toe.R
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -589,7 +220,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: hips_main
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2

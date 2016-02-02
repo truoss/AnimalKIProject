@@ -24,6 +24,7 @@ public class AnimalSightFilter
 
     public Transform[] OptimizedSightings(Transform[] rawSightings)
     {
+        Debug.LogWarning("OptimizedSightings");
         //update memory
         for (int i = 0; i < rawSightings.Length; i++)
         {

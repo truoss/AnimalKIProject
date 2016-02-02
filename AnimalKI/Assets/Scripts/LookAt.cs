@@ -12,7 +12,8 @@ public class LookAt : MonoBehaviour
     public float MaxHeadTurnAngle;
     Vector3 relativePos;
     float angle;
-    
+
+    public GameObject targetObj;
 
     public void SetTarget(Transform target)
     {
@@ -42,13 +43,13 @@ public class LookAt : MonoBehaviour
             {
                 HeadBone.rotation = Quaternion.Lerp(lastRotation, HeadBone.rotation, Time.deltaTime * speed);
                 lastRotation = HeadBone.rotation;
-                
             }
             else
             {
                 relativePos = target.position - HeadBone.position;
-                angle = Vector3.Angle(relativePos, transform.forward);
-
+                angle = Vector3.Angle(relativePos, HeadBone.forward);
+                if(targetObj)
+                    targetObj.transform.position = relativePos;
                 if (angle < MaxHeadTurnAngle * 0.5f)
                 {
                     if (relativePos != Vector3.zero)
@@ -59,53 +60,7 @@ public class LookAt : MonoBehaviour
                 }
                 else
                     SetTarget(null);
-            }
-            /*
-            else if (lastTarget != target)
-            {
-                if (targetPos != target.position)
-                    targetPos = target.position;
-
-                relativePos = targetPos - HeadBone.position;
-                float angle = Vector3.Angle(relativePos, transform.forward);
-
-                // If the angle between forward and where the player is, is less than half the angle of view...
-                if (angle < MaxHeadTurnAngle * 0.5f)
-                {
-
-                    if (relativePos != Vector3.zero)
-                    {
-                        HeadBone.rotation = Quaternion.Lerp(lastRotation, Quaternion.LookRotation(relativePos), Time.deltaTime * speed);
-                        lastRotation = HeadBone.rotation;
-                    }
-
-                    if (lastRotation == Quaternion.LookRotation(relativePos))
-                        lastTarget = target;
-                }
-                else
-                    SetTarget(null);
-            }
-            else if (target == lastTarget)
-            {
-                if (targetPos != target.position)
-                    targetPos = target.position;
-
-                relativePos = targetPos - HeadBone.position;
-                float angle = Vector3.Angle(relativePos, transform.forward);
-
-                // If the angle between forward and where the player is, is less than half the angle of view...
-                if (angle < MaxHeadTurnAngle * 0.5f)
-                {
-                    if (relativePos != Vector3.zero)
-                    {
-                        HeadBone.rotation = Quaternion.Lerp(lastRotation, Quaternion.LookRotation(relativePos), 1);
-                        lastRotation = HeadBone.rotation;
-                    }
-                }
-                else
-                    SetTarget(null);
-            }
-            */
+            }            
         }      
     }
 }

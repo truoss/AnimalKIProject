@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(SpecialCollider))]
 public class AnimalSight : MonoBehaviour
 {
     //public Animal animal; 
@@ -34,6 +33,7 @@ public class AnimalSight : MonoBehaviour
 
     public void DoUpdate()
     {
+        Debug.LogWarning("DoUpdate()");
         //hit = new RaycastHit();
         if (col)
             col.radius = sightRange;
@@ -76,6 +76,7 @@ public class AnimalSight : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
+        //Debug.LogWarning(other, other);
         //every collider goes through here
         //TODO: Filter collider
         if (Utils.IsInLayerMask(other.gameObject, SightMask))
