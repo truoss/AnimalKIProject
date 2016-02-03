@@ -20,7 +20,12 @@ public class LookAt : MonoBehaviour
         //Debug.LogWarning(target, target);
         this.target = target;        
     }
-    
+
+    public Transform GetTarget()
+    {
+        return target;
+    }
+
     /*
     public void SetFocusPosition(Vector3 target)
     {

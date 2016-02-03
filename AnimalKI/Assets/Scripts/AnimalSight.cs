@@ -33,7 +33,6 @@ public class AnimalSight : MonoBehaviour
 
     public void DoUpdate()
     {
-        Debug.LogWarning("DoUpdate()");
         //hit = new RaycastHit();
         if (col)
             col.radius = sightRange;
