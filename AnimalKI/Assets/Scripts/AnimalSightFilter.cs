@@ -42,7 +42,7 @@ public class AnimalSightFilter
         }
 
         List<Transform> tmp = new List<Transform>();
-        int n = 0;
+        //int n = 0;
         foreach (Transform key in memory.Keys)
         {
             if (!((float)memory[key] + lastChangedThreshold < Time.time))

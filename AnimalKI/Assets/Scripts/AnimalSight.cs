@@ -14,7 +14,7 @@ public class AnimalSight : MonoBehaviour
     RaycastHit hit;
     public List<Transform> transformsInSight = new List<Transform>();
     //private int lastSightCount;
-    private Transform newestSighting;
+    //private Transform newestSighting;
     private Transform previousSighting;
 
     void Awake()
@@ -97,7 +97,7 @@ public class AnimalSight : MonoBehaviour
                         if (!transformsInSight.Contains(hit.collider.gameObject.transform))
                         {
                             transformsInSight.Add(hit.collider.gameObject.transform);
-                            newestSighting = hit.collider.gameObject.transform;
+                            //newestSighting = hit.collider.gameObject.transform;
                         }
                     }
                     else if (hit.collider.gameObject.activeInHierarchy == false)

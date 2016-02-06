@@ -98,10 +98,11 @@ public class Animal : MonoBehaviour
             lastBodyTurnTargetUpdate = Time.time;
         }
         
+        if(bodyRotateAt)
+            bodyRotateAt.DoUpdate();
 
-        bodyRotateAt.DoUpdate();
-
-        lookAt.DoUpdate();        
+        if(lookAt)
+            lookAt.DoUpdate();        
     }
 
     private void SetBodyTurnTarget()
