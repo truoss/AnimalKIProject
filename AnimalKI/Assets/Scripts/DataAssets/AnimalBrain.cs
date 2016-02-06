@@ -2,6 +2,7 @@
 
 public class AnimalBrain : ScriptableObject
 {
+    /*
     static AnimalBrain instance;
     public static AnimalBrain I
     {
@@ -20,4 +21,5 @@ public class AnimalBrain : ScriptableObject
             return instance;
         }
     }
+    */
 }

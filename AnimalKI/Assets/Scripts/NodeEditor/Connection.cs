@@ -29,10 +29,10 @@ namespace NodeSystem
 
         public static void DrawNodeCurve(Rect start, Rect end)
         {
-            Debug.LogWarning("DrawNodeCurve: " + start + " " + end);
+            //Debug.LogWarning("DrawNodeCurve: " + start + " " + end);
 
-            Vector3 startPos = new Vector3(start.x + 1 / 2, start.y + 1 / 2, 0);
-            Vector3 endPos = new Vector3(end.x + 1 / 2, end.y + 1 / 2, 0);
+            Vector3 startPos = new Vector3(start.x + GUIx.I.socketStyle.fixedWidth, start.y + GUIx.I.socketStyle.fixedHeight*0.5f, 0);
+            Vector3 endPos = new Vector3(end.x, end.y + GUIx.I.socketStyle.fixedHeight * 0.5f, 0);
             Vector3 startTan = startPos + Vector3.right * 50;
             Vector3 endTan = endPos + Vector3.left * 50;
             Color shadowCol = new Color(0, 0, 0, .06f);

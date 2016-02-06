@@ -6,6 +6,7 @@ namespace NodeSystem
 {
     public class NodeGraph : ScriptableObject
     {
-        public List<Node> nodes = new List<Node>();
+        public string Name = "defaultName";
+        public List<Node> nodes = new List<Node>();        
     }
 }

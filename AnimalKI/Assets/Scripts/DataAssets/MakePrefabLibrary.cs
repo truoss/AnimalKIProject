@@ -21,9 +21,9 @@ public class MakePrefabLibrary
     }
     */
 
-    static void CreateDataAsset(string name, Object asset)
+    public static void CreateDataAsset(string name, Object asset)
     {
-        AssetDatabase.CreateAsset(asset as Object, "Assets/"+ name +".asset");
+        AssetDatabase.CreateAsset(asset as Object, "Assets/Resources/"+ name +".asset");
         AssetDatabase.SaveAssets();
 
         EditorUtility.FocusProjectWindow();
