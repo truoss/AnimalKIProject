@@ -71,7 +71,7 @@ namespace NodeSystem
         }
     }
     
-
+    [Serializable]
     public class GUITestNode : Node
     {
         public const string ID = "GUITestNode";

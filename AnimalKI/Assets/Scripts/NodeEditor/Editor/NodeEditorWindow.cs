@@ -20,8 +20,6 @@ namespace NodeSystem
                 editorWindow.Close();
 
             editorWindow = GetWindow<NodeEditorWindow>();
-
-            StatusMsg = "nothing loaded!";
             //editorWindow.position = new Rect(100,100,512,512);
             //editorWindow.minSize = new Vector2(512,512);
             //Debug.LogWarning("ShowEditor: " + editorWindow.position);
@@ -194,14 +192,19 @@ namespace NodeSystem
             {
                 if (editorWindow)
                 {
+                    if (!sideWindowRect.Contains(Event.current.mousePosition) && (Event.current.button == 0 || Event.current.button == 1) && Event.current.type == EventType.MouseDown)
+                        GUI.FocusControl("");
+
                     //var sideWindowWidth = Mathf.Min(600, Mathf.Max(200, (int)(position.width / 5)));
                     sideWindowRect = new Rect(0, 0, 155, editorWindow.position.height);
                     //GUI.Box(sideWindowRect, "");
                     //Debug.LogWarning(sideWindowRect);
                     GUILayout.BeginArea(sideWindowRect, GUI.skin.box);
                     //DrawSideWindow();      
-                    if(Graph == null)
+                    if (Graph == null)
                         StatusMsg = "nothing loaded!";
+                    else
+                        StatusMsg = "loaded " + Graph.Name;
                     GUILayout.Label("Status: " + StatusMsg);
                     NodeEditor.NoteGraphName = GUILayout.TextField(NodeEditor.NoteGraphName, 32, GUILayout.ExpandWidth(true));
 
