@@ -12,6 +12,17 @@ namespace NodeSystem
         public List<SocketIn> Inputs = new List<SocketIn>();
         public List<SocketOut> Outputs = new List<SocketOut>();
 
+        public Socket[] GetAllSockets()
+        {
+            List<Socket> allSockets = new List<Socket>(Inputs.ToArray());
+            for (int i = 0; i < Outputs.Count; i++)
+            {
+                allSockets.Add(Outputs[i]);
+            }
+
+            return allSockets.ToArray();
+        }
+
         [NonSerialized]
         internal bool calculated = true;
 
@@ -30,12 +41,15 @@ namespace NodeSystem
             //Debug.LogWarning("DrawNode: " + rect);
             //var width = GUIx.GUIContentSize(GUIx.I.skin.GetStyle("Label"), new GUIContent(GetID)).x;
             //Debug.LogWarning();
-            rect = new Rect(rect.x, rect.y, 130, (Inputs.Count + Outputs.Count) * 10 + 30+50);
+            rect = new Rect(rect.x, rect.y, 130, (Inputs.Count + Outputs.Count) * 15 + 40);
             //nodeRect.position += NodeEditor.curEditorState.zoomPanAdjust;
             //contentOffset = new Vector2(0, 20);            
 
             GUI.BeginGroup(rect);
-            if(NodeEditor.IsHoveredNode(this) || NodeEditor.IsSelectedNode(this))
+
+            if (NodeEditor.IsSelectedNode(this))
+                GUI.color = GUIx.I.nodeSelectedColor;
+            else if (NodeEditor.IsHoveredNode(this))
                 GUI.color = GUIx.I.nodeHighlightColor;
             else
                 GUI.color = GUIx.I.nodeColor;
@@ -44,7 +58,7 @@ namespace NodeSystem
 
             GUI.changed = false;      
             
-            GUILayout.BeginArea(new Rect(0, 0, rect.width, rect.height));
+            GUILayout.BeginArea(new Rect(0, 2, rect.width, rect.height));
 
             GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
@@ -102,7 +116,7 @@ namespace NodeSystem
                 if (NodeEditor.IsHoveredSocket(Inputs[i]) || NodeEditor.IsSelectedSocket(Inputs[i]))
                     GUI.color = Color.yellow * 1.3f;
                 else
-                    GUI.color = Color.yellow; //Inputs[i].typeData.declaration.col;
+                    GUI.color = Color.yellow * 0.8f; //Inputs[i].typeData.declaration.col;
                 GUILayout.Label(GUIx.empty, GUIx.I.socketStyle);
                 if (Event.current.type == EventType.Repaint)
                     Inputs[i].rect = GUILayoutUtility.GetLastRect();
@@ -116,7 +130,7 @@ namespace NodeSystem
             }
 
 
-            GUILayout.Space(10);
+            GUILayout.Space(16);
 
             
             for (int i = 0; i < Outputs.Count; i++)
@@ -130,7 +144,7 @@ namespace NodeSystem
                 if (NodeEditor.IsHoveredSocket(Outputs[i]) || NodeEditor.IsSelectedSocket(Outputs[i]))
                     GUI.color = Color.yellow * 1.3f;
                 else
-                    GUI.color = Color.yellow; //Inputs[i].typeData.declaration.col;
+                    GUI.color = Color.yellow * 0.8f; //Inputs[i].typeData.declaration.col;
                 GUILayout.Label(GUIx.empty, GUIx.I.socketStyle);
                 if (Event.current.type == EventType.Repaint)
                     Outputs[i].rect = GUILayoutUtility.GetLastRect();

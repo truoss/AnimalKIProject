@@ -28,6 +28,7 @@ namespace NodeSystem
         }
 
         public Color nodeColor;
+        public Color nodeSelectedColor;
         public Color nodeHighlightColor;
 
         //styles example
@@ -36,6 +37,7 @@ namespace NodeSystem
         public GUIStyle nodeStyle { get { return skin.GetStyle("Node"); } }
         public GUIStyle socketStyle { get { return skin.GetStyle("Socket"); } }
         public GUIStyle connectionStyle { get { return skin.GetStyle("Connection"); } }
+        public GUIStyle window { get { return skin.GetStyle("Window"); } }
 
 
         //simplyfy new GUIContent("");

@@ -18,8 +18,14 @@ namespace NodeSystem
 
         public List<Connection> connections = new List<Connection>();
 
-        //public Socket(){}
-        //public Socket (Node node, TypeData type) { parent = node; typeData = type; }
+        public void ValidateConnections()
+        {
+            for (int i = connections.Count-1; i >= 0; i-=1)
+            {
+                if (connections[i].startSocket == null || connections[i].endSocket == null)
+                    connections.Remove(connections[i]);
+            }
+        }
 
         public abstract Socket Create(Node node, TypeData type);
 

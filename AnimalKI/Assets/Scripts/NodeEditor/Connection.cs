@@ -16,7 +16,7 @@ namespace NodeSystem
             if (startSocket == null || endSocket == null)
                 return;
 
-            DrawNodeCurve(GetAbsoluteRect(startSocket.rect, startSocket.parent.rect), GetAbsoluteRect(endSocket.rect, endSocket.parent.rect));
+            DrawNodeCurve(NodeEditor.GUIRectToScreenRect(startSocket.rect, startSocket.parent.rect), NodeEditor.GUIRectToScreenRect(endSocket.rect, endSocket.parent.rect));
         }
 
         public virtual void DrawConnection(Rect endpoint)
@@ -24,7 +24,7 @@ namespace NodeSystem
             if (startSocket == null)
                 return;
 
-            DrawNodeCurve(GetAbsoluteRect(startSocket.rect, startSocket.parent.rect), endpoint);
+            DrawNodeCurve(NodeEditor.GUIRectToScreenRect(startSocket.rect, startSocket.parent.rect), endpoint);
         }
 
         public static void DrawNodeCurve(Rect start, Rect end)
@@ -45,10 +45,7 @@ namespace NodeSystem
             Handles.DrawBezier(startPos, endPos, startTan, endTan, Color.black, null, 1);
         }
 
-        public static Rect GetAbsoluteRect(Rect rect, Rect parentRect)
-        {
-            return new Rect(rect.x + parentRect.x, rect.y + parentRect.y, rect.width, rect.height);
-        }
+        
 #endif
     }
 }
