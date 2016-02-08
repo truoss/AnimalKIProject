@@ -11,7 +11,7 @@ namespace NodeSystem
         private Type valueType;
 
         //public Rect rect;
-        public Node parent;
+        public Node parentNode;
         public TypeData typeData;
 
         public Rect rect;
@@ -82,7 +82,7 @@ namespace NodeSystem
     {
         public override Socket Create(Node node, TypeData type)
         {
-            parent = node;
+            parentNode = node;
             typeData = type;
 
             return this;
@@ -93,7 +93,7 @@ namespace NodeSystem
     {
         public override Socket Create(Node node, TypeData type)
         {
-            parent = node;
+            parentNode = node;
             typeData = type;
 
             return this;

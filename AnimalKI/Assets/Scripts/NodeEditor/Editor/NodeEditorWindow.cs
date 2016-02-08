@@ -70,7 +70,7 @@ namespace NodeSystem
                 NodeEditor.Graph = Graph;
                 NodeEditor.viewOffset.x = scrollViewRect.x;
                 NodeEditor.viewOffset.y = scrollViewRect.y;
-                NodeEditor.canvasSize = new Vector2(4096,4096);
+                NodeEditor.canvasSize = new Vector2(4000,4000);
 
                 //Update Hover
                 NodeEditor.hoveredNode = GetNodeFromMousePos(NodeEditor.mousePos, Graph.nodes);
@@ -115,11 +115,11 @@ namespace NodeSystem
                     {
                         var socket = GetSocketFromMousePos(node, NodeEditor.mousePos);
                         if (socket && socket is SocketIn
-                            && socket.parent != NodeEditor.startSocket.parent
+                            && socket.parentNode != NodeEditor.startSocket.parentNode
                             && !NodeEditor.IsConnectionLoop(socket as SocketIn, NodeEditor.tentativeConnection)
                             && !NodeEditor.IsDoubleConnection(socket as SocketIn, NodeEditor.tentativeConnection.startSocket))
                         {
-                            Debug.LogWarning("socket: " + socket);
+                            //Debug.LogWarning("socket: " + socket);
                             NodeEditor.CreateConnectionMode = false;
                             NodeEditor.endSocket = socket as SocketIn;
 
@@ -145,9 +145,24 @@ namespace NodeSystem
                     DragNodes(e, Graph.nodes);
 
 
-
-                GUI.Box(scrollViewRect, GUIx.empty, GUIx.I.window);
+                //GUI.Box(scrollViewRect, GUIx.empty, GUIx.I.window);
                 Graph.scrollPos = GUI.BeginScrollView(scrollViewRect, Graph.scrollPos, new Rect(0, 0, NodeEditor.canvasSize.x, NodeEditor.canvasSize.y), false, false);
+                
+                //background
+                //TODO: only draw visible
+                for (int i = 0; i < NodeEditor.canvasSize.x / GUIx.I.background.fixedWidth; i++)
+                {
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, 0, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 2, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 3, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 4, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 5, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 6, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 7, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                    //GUI.DrawTexture(new Rect(GUIx.I.background.fixedWidth * i, GUIx.I.background.fixedWidth * 8, GUIx.I.background.fixedWidth, GUIx.I.background.fixedHeight), GUIx.I.background.normal.background);
+                }                
+                
                 // Draw nodes
                 for (int i = 0; i < Graph.nodes.Count; i++)
                 {

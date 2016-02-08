@@ -77,58 +77,71 @@ namespace NodeSystem
             return changed;
         }
 
-        /*
-        static bool UpdateHovering(Vector2 mousePos, List<Node> nodes)
+        public static Node[] GetConnectedNodes(Node node)
         {
-            bool changes = false;
-            var tmp = GetNodeFromMousePos(mousePos, nodes);
-            if (tmp != hoveredNode)
-                changes = true;
-
-            hoveredNode = tmp;
-
-            if (hoveredNode)
+            List<Node> nodes = new List<Node>();
+            var connections = GetAllOutputConnections(node);
+            if(connections != null && connections.Length > 0)
+            for (int i = 0; i < connections.Length; i++)
             {
-                var tmp2 = GetSocketFromMousePos(hoveredNode, mousePos);
-                if (tmp2 != hoveredSocket)
-                {
-                    changes |= true;
-                }
-                hoveredSocket = tmp2;                
+                nodes.Add(connections[i].endSocket.parentNode);
             }
 
-            return changes;
+            return nodes.ToArray();
         }
 
-        static bool UpdateSelecting(Vector2 mousePos, List<Node> nodes)
+        public static Connection[] GetAllOutputConnections(Node node)
         {
-            bool changes = false;
-            var tmp = GetNodeFromMousePos(mousePos, nodes);
-            if (tmp != selectedNode)
-                changes = true;
-
-            selectedNode = tmp;
-
-            if (selectedNode)
+            List<Connection> connections = new List<Connection>();
+            if (node.Outputs.Count > 0)
             {
-                var tmp2 = GetSocketFromMousePos(selectedNode, mousePos);
-                if (tmp2 != selectedSocket)
+                for (int i = 0; i < node.Outputs.Count; i++)
                 {
-                    changes |= true;
+                    if (node.Outputs[i].connections.Count > 0)
+                    {
+                        for (int x = 0; x < node.Outputs[i].connections.Count; x++)
+                        {
+                            connections.Add(node.Outputs[i].connections[x]);
+                        }
+                    }
                 }
-                selectedSocket = tmp2;
             }
 
-            return changes;
+            return connections.ToArray();
         }
-        */
 
         public static bool IsConnectionLoop(SocketIn inSocket, Connection connection)
         {
-            if (inSocket.parent == connection.startSocket.parent)
+            if (inSocket.parentNode == connection.startSocket.parentNode)
                 return true;
             else
+            {
+                //var nodes = GetAllOutputConnections(inSocket.parentNode);
+
+                return RekursivLoopingCheck(inSocket, connection, inSocket.parentNode);
+            }
+        }
+
+        private static bool RekursivLoopingCheck(SocketIn inSocket, Connection connection, Node node)
+        {
+            var connections = GetAllOutputConnections(node);
+
+            if (connections == null || connections.Length == 0)
                 return false;
+
+            bool isLooping = false;
+            for (int i = 0; i < connections.Length; i++)
+            {
+                if (connections[i].endSocket.parentNode == connection.startSocket.parentNode)
+                {
+                    isLooping = true;
+                    break;
+                }
+                else
+                    isLooping = RekursivLoopingCheck(inSocket, connection, connections[i].endSocket.parentNode);
+            }
+
+            return isLooping;
         }
 
         public static bool IsDoubleConnection(SocketIn inSocket, SocketOut outSocket)
@@ -140,13 +153,6 @@ namespace NodeSystem
             }
             return false;
         }
-
-        /*
-        public static Rect GetAbsoluteRect(Rect rect, Rect parentRect)
-        {
-            return new Rect(rect.x + parentRect.x, rect.y + parentRect.y, rect.width, rect.height);
-        }
-        */
 
         public static Rect GUIRectToScreenRect(Rect rect)
         {
@@ -164,56 +170,6 @@ namespace NodeSystem
         {
             return new Vector2(v2.x - viewOffset.x + Graph.scrollPos.x, v2.y - viewOffset.y + Graph.scrollPos.y);
         }
-
-
-        /*
-        static public Rect GUIToScreenRect(Rect rect)
-        {
-            Vector2 screenPoint = GUIUtility.GUIToScreenPoint(new Vector2(rect.x, rect.y));
-            return new Rect(screenPoint.x-scrollpos.x, screenPoint.y-scrollpos.x, rect.width, rect.height);
-        }
-        */
-
-        /*
-        public static Node GetNodeFromMousePos(Vector2 mousePos, List<Node> nodes)
-        {
-            for (int i = nodes.Count - 1; i >= 0; i -= 1)
-            {
-                if (nodes[i].rect.Contains(mousePos))
-                {
-                    return nodes[i];
-                }
-            }
-            return null;
-        }
-
-
-        public static Socket GetSocketFromMousePos(Node node, Vector2 mousePos)
-        {
-            for (int i = 0; i < node.Inputs.Count; i++)
-            {
-                var absoluteRect = GetAbsoluteRect(node.Inputs[i].rect, node.rect);
-                //GUI.Box(screenRect, GUIx.empty);
-                //Debug.LogWarning(absoluteRect + " " + node.Inputs[i].rect + " " + mousePos);
-                if (absoluteRect.Contains(mousePos))
-                {
-                    return node.Inputs[i];
-                }
-            }
-
-            for (int i = 0; i < node.Outputs.Count; i++)
-            {
-                //var screenRect = GUIToScreenRect(node.Inputs[i].rect);
-                var absoluteRect = GetAbsoluteRect(node.Outputs[i].rect, node.rect);
-                //GUI.Box(screenRect, GUIx.empty);
-                if (absoluteRect.Contains(mousePos))
-                {
-                    return node.Outputs[i];
-                }
-            }
-
-            return null;
-        }   
-        */
+        
     }
 }

@@ -16,7 +16,7 @@ namespace NodeSystem
             if (startSocket == null || endSocket == null)
                 return;
 
-            DrawNodeCurve(NodeEditor.GUIRectToScreenRect(startSocket.rect, startSocket.parent.rect), NodeEditor.GUIRectToScreenRect(endSocket.rect, endSocket.parent.rect));
+            DrawNodeCurve(NodeEditor.GUIRectToScreenRect(startSocket.rect, startSocket.parentNode.rect), NodeEditor.GUIRectToScreenRect(endSocket.rect, endSocket.parentNode.rect));
         }
 
         public virtual void DrawConnection(Rect endpoint)
@@ -24,7 +24,7 @@ namespace NodeSystem
             if (startSocket == null)
                 return;
 
-            DrawNodeCurve(NodeEditor.GUIRectToScreenRect(startSocket.rect, startSocket.parent.rect), endpoint);
+            DrawNodeCurve(NodeEditor.GUIRectToScreenRect(startSocket.rect, startSocket.parentNode.rect), endpoint);
         }
 
         public static void DrawNodeCurve(Rect start, Rect end)

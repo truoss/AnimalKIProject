@@ -38,6 +38,7 @@ namespace NodeSystem
         public GUIStyle socketStyle { get { return skin.GetStyle("Socket"); } }
         public GUIStyle connectionStyle { get { return skin.GetStyle("Connection"); } }
         public GUIStyle window { get { return skin.GetStyle("Window"); } }
+        public GUIStyle background { get { return skin.GetStyle("Background"); } }
 
 
         //simplyfy new GUIContent("");
